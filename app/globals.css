@@ -1,0 +1,390 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+  --app-bar-background-color: #436666;
+  --app-bar-text-color: #23D3ED;
+
+  --logo-color: #436666;
+  --app-panel-logo-color: #f8e9dc;
+
+  --background-color: #f8e9dc;
+  --text-color: #61391a;
+
+  --sidebar-background-color: #f8e9dc;
+  --sidebar-text-color: #9BA3AF;
+  
+  --sidebar-link-background-color: #1f293708;
+  --sidebar-link-text-color: #61391a;
+  --sidebar-link-text-color-hover:#a99484;
+  
+  --sidebar-active-link-background-color: #1F2937;
+  --sidebar-active-link-text-color: #FFFFFF;
+
+  --panel-background-color: #436666;
+  --panel-text-color: #f8e9dc;
+  
+  --link-color: #2499ba;
+  --panel-link-color: #23D3ED;
+  --button-color: #FB923C;
+
+  --link-color-hover: #0B6783;
+  --link-color-focus: #0E7D9D;
+
+  --panel-link-color-hover: #046271;
+  --panel-link-color-focus: #25E1F4;
+
+  --button-color-hover: #FC9E4A;
+  --button-color-focus: #FA882E;
+}
+
+:root[data-theme='dark'] {
+  --app-bar-background-color: #f8e9dc;
+  --app-bar-text-color: #6A7280;
+  --app-panel-logo-color: #436666;
+  
+  --background-color: #436666;
+  --text-color: #f8e9dc;
+
+  --sidebar-background-color: #436666;
+  --sidebar-text-color: #9BA3AF;
+  --sidebar-text-color-hover:#ced3db;
+  --sidebar-link-background-color: #436666;
+  --sidebar-link-text-color: #9BA3AF;
+  --sidebar-active-link-background-color: #1F2937;
+  --sidebar-active-link-text-color: #FFFFFF;
+
+  --logo-color: #f8e9dc;
+  --link-color: #a6cef3;
+  --link-color-hover: #E3E6EA;
+
+  --panel-background-color:#f8e9dc;
+  --panel-text-color: #436666;
+  --panel-link-color: #0D7490;
+  
+  --button-color: #FB923C;
+  --button-color-hover: #f7ae6f;
+  --button-color-focus: #d06412;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="color"],
+input[type="range"],
+input[type="radio"],
+textarea {
+  @apply text-slate-900 rounded-lg;
+}
+
+input[readOnly] {
+  cursor: not-allowed;
+  color: grey;
+  outline: none;
+}
+
+input[readOnly]:focus {
+  box-shadow: none;
+}
+
+label {
+  @apply font-medium
+}
+
+a {
+  color: var(--link-color);
+}
+
+a.hover {
+  color: var(--link-color-hover);
+}
+
+.bg-theme-color.a {
+  color: var(--panel-link-color);
+}
+
+.bg-theme-color.a:hover {
+  color: var(--panel-link-color-hover);
+}
+
+input:focus{
+  outline: 1px solid var(--button-color-focus);
+  outline-offset: 1px;
+}
+
+input:focus-visible{
+  outline: 1px solid var(--button-color-focus);
+  outline-offset: 1px;
+}
+
+.logo-theme-color {
+  fill: var(--logo-color);
+  color: var(--logo-color);
+}
+
+.panel-logo-theme-color {
+  fill: var(--app-panel-logo-color);
+  color: var(--app-panel-logo-color);
+}
+
+.bg-theme-color {
+  background-color: var(--background-color);
+}
+
+.bg-panel-theme-color {
+  background-color: var(--panel-background-color);
+  color: var(--panel-text-color);
+}
+
+.text-panel-theme-color {
+  color: var(--panel-text-color)
+}
+
+.bg-theme-panel-color {
+  background-color: var(--panel-background-color);
+}
+
+.bg-panel-text-color {
+  background-color: var(--panel-text-color);
+}
+
+.border-theme-color {
+  border-color: var(--text-color) !important;
+  @apply border
+}
+
+.border-panel-theme-color {
+  border-color: var(--panel-text-color);
+  @apply border
+}
+
+.text-theme-color {
+  color: var(--text-color);
+}
+
+.text-theme-color-inverse {
+  color: var(--background-color);
+}
+
+.link-theme-color {
+  color: var(--link-color);
+}
+
+.link-theme-color:hover {
+  color: var(--link-color-hover);
+}
+
+.panel-link-theme-color {
+  color: var(--panel-link-color);
+}
+
+.panel-link-theme-color:hover {
+  color: var(--panel-link-color-hover);
+}
+
+.panel-link-theme-color:focus {
+  color: var(--panel-link-color-focus);
+}
+
+.button-theme-color {
+  color: var(--button-color)
+}
+
+.button-theme-color-hover:hover{
+  color: var(--button-color-hover)
+}
+
+.button-theme-color-focus:focus {
+  color: var(--button-color-focus)
+}
+
+.sidebar {
+  background-color: var(--sidebar-background-color);
+  color: var(--sidebar-text-color);
+}
+
+.sidebar-link {
+  background-color: var(--sidebar-link-background-color);
+  color: var(--sidebar-link-text-color);
+}
+
+.sidebar-link:hover {
+  color: var(--sidebar-link-text-color-hover);
+}
+
+.sidebar-active-link {
+  background-color: var(--sidebar-active-link-background-color);
+  color: var(--sidebar-active-link-text-color);
+}
+
+.text-sidebar-theme-color {
+  color: var(--sidebar-text-color);
+}
+
+.bg-sidebar-theme-color {
+  color: var(--sidebar-background-color);
+}
+
+.panel {
+  @apply border-theme-color text-theme-color my-4 border-2 p-4 flex-grow sm:rounded-xl
+}
+
+.app-bar {
+  background-color: var(--app-bar-background-color);
+  color: var(--app-bar-text-color);
+}
+
+.app-bar-background-color {
+  background-color: var(--app-bar-background-color);
+}
+
+.app-bar-text-color{
+  color: var(--app-bar-text-color);
+}
+
+.app-bar input::placeholder  {
+  color: var(--app-bar-text-color); 
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn {
+  @apply inline-flex justify-center rounded-md px-3 py-2 text-sm font-semibold shadow-sm
+} 
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  border-color: grey;
+  background-color: grey;
+}
+
+.btn:hover{
+  border-color: var(--button-color-hover);
+  color: var(--button-color-hover);
+}
+
+.btn:focus{
+  border-color: var(--button-color-focus);
+  outline: 1px solid var(--button-color-focus);
+  outline-offset: 1px;
+}
+
+.btn-inverse {
+  @apply btn text-theme-color border-theme-color;
+}
+
+.btn-inverse:focus {
+  border-color: var(--button-color-focus);
+  outline: 1px solid var(--button-color-focus);
+  outline-offset: 1px;
+}
+
+.primary-btn {
+  @apply btn;
+  background-color: var(--button-color) !important;
+  color: white;
+}
+
+.primary-btn:hover {
+  color: white;
+  background-color: var(--button-color-hover) !important;
+}
+
+.primary-btn:focus {
+  color: white;
+  outline: 1px solid var(--button-color-focus) !important;
+  outline-offset: 1px;
+}
+
+.app-title-text-color{
+  color: var(--button-color)
+}
+
+.app-title-text-color:hover{
+  color: var(--button-color-hover)
+}
+
+
+
+.secondary-btn {
+  background-color: rgb(255, 255, 255, 0.2);
+  @apply btn border-theme-color text-theme-color;
+}
+
+.secondary-btn:focus {
+  outline: 1px solid var(--text-color);
+  outline-offset: 1px;
+}
+
+.secondary-btn-panel {
+  @apply btn border-panel-theme-color;
+  color: var(--panel-text-color)
+}
+
+.secondary-btn-panel:hover {
+  color: var(--button-color-hover);
+  border-color: var(--button-color-hover);
+}
+
+.secondary-btn-panel:focus {
+  outline: 1px solid var(--background-color);
+  outline-offset: 1px;
+  color: var(--button-color-hover);
+}
+
+.secondary-btn-dialog {
+  background-color: rgb(255, 255, 255, 0.2);
+  @apply btn border-slate-800 text-slate-800;
+}
+
+.secondary-btn-dialog:hover {
+  @apply btn border-slate-600 text-slate-600;
+}
+
+.secondary-btn-dialog:focus {
+  @apply btn border-slate-950 text-slate-950;
+}
+
+.cautious-btn {
+  background-color: rgb(255, 255, 255, 0.2); 
+  @apply border btn border-red-500 text-red-600
+}
+
+.cautious-btn:hover {
+  @apply btn border-red-300 text-red-300
+}
+
+.cautious-btn:focus {
+  @apply btn border-red-800 text-red-800
+}
+
+.section-header {
+  @apply text-lg font-semibold text-center w-full mb-5;
+}
+
+.selectable-toast-container * {
+  user-select: text !important;
+}
+
